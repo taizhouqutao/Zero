@@ -33,7 +33,7 @@ namespace WebApi.Models
         public string CellphoneNo { get; set; }
 
         /// <summary>
-        /// 第三方来源
+        /// 第三方来源(非空)
         /// </summary>
         /// <value>The source sys no.</value>
         [DataMember]

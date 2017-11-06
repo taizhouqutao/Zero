@@ -1,4 +1,20 @@
-﻿using System;
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* PropertyValue.cs
+*
+* 功 能： N/A
+* 类 名： PropertyValue
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2017/11/6 23:31:23   N/A    初版
+*
+* Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
+using System;
 using System.Data;
 using System.Text;
 using MySql.Data.MySqlClient;
@@ -29,9 +45,10 @@ namespace WebApi.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select count(1) from T_PropertyValue");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11)			};
+					new MySqlParameter("@SysNo", MySqlDbType.Int32)
+			};
 			parameters[0].Value = SysNo;
 
 			return DbHelperMySQL.Exists(strSql.ToString(),parameters);
@@ -45,22 +62,20 @@ namespace WebApi.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into T_PropertyValue(");
-			strSql.Append("SysNo,PropertySysNo,Value,Status,CreateTime,EditTime)");
+			strSql.Append("PropertySysNo,Value,Status,CreateTime,EditTime)");
 			strSql.Append(" values (");
-			strSql.Append("@SysNo,@PropertySysNo,@Value,@Status,@CreateTime,@EditTime)");
+			strSql.Append("@PropertySysNo,@Value,@Status,@CreateTime,@EditTime)");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11),
 					new MySqlParameter("@PropertySysNo", MySqlDbType.Int32,11),
 					new MySqlParameter("@Value", MySqlDbType.VarChar,500),
 					new MySqlParameter("@Status", MySqlDbType.Int32,11),
 					new MySqlParameter("@CreateTime", MySqlDbType.DateTime),
 					new MySqlParameter("@EditTime", MySqlDbType.DateTime)};
-			parameters[0].Value = model.SysNo;
-			parameters[1].Value = model.PropertySysNo;
-			parameters[2].Value = model.Value;
-			parameters[3].Value = model.Status;
-			parameters[4].Value = model.CreateTime;
-			parameters[5].Value = model.EditTime;
+			parameters[0].Value = model.PropertySysNo;
+			parameters[1].Value = model.Value;
+			parameters[2].Value = model.Status;
+			parameters[3].Value = model.CreateTime;
+			parameters[4].Value = model.EditTime;
 
 			int rows=DbHelperMySQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -84,7 +99,7 @@ namespace WebApi.DAL
 			strSql.Append("Status=@Status,");
 			strSql.Append("CreateTime=@CreateTime,");
 			strSql.Append("EditTime=@EditTime");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@PropertySysNo", MySqlDbType.Int32,11),
 					new MySqlParameter("@Value", MySqlDbType.VarChar,500),
@@ -118,9 +133,10 @@ namespace WebApi.DAL
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete from T_PropertyValue ");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11)			};
+					new MySqlParameter("@SysNo", MySqlDbType.Int32)
+			};
 			parameters[0].Value = SysNo;
 
 			int rows=DbHelperMySQL.ExecuteSql(strSql.ToString(),parameters);
@@ -161,9 +177,10 @@ namespace WebApi.DAL
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select SysNo,PropertySysNo,Value,Status,CreateTime,EditTime from T_PropertyValue ");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11)			};
+					new MySqlParameter("@SysNo", MySqlDbType.Int32)
+			};
 			parameters[0].Value = SysNo;
 
 			WebApi.Model.PropertyValue model=new WebApi.Model.PropertyValue();

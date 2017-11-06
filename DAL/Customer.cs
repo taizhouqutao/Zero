@@ -1,4 +1,20 @@
-﻿using System;
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* Customer.cs
+*
+* 功 能： N/A
+* 类 名： Customer
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2017/11/6 23:31:16   N/A    初版
+*
+* Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
+using System;
 using System.Data;
 using System.Text;
 using MySql.Data.MySqlClient;
@@ -29,9 +45,10 @@ namespace WebApi.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select count(1) from T_Customer");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11)			};
+					new MySqlParameter("@SysNo", MySqlDbType.Int32)
+			};
 			parameters[0].Value = SysNo;
 
 			return DbHelperMySQL.Exists(strSql.ToString(),parameters);
@@ -45,11 +62,10 @@ namespace WebApi.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into T_Customer(");
-			strSql.Append("SysNo,CustomerName,NickName,CellphoneNo,Status,CreateTime,EditTime,JsonString,SourceSysNo)");
+			strSql.Append("CustomerName,NickName,CellphoneNo,Status,CreateTime,EditTime,JsonString,SourceSysNo)");
 			strSql.Append(" values (");
-			strSql.Append("@SysNo,@CustomerName,@NickName,@CellphoneNo,@Status,@CreateTime,@EditTime,@JsonString,@SourceSysNo)");
+			strSql.Append("@CustomerName,@NickName,@CellphoneNo,@Status,@CreateTime,@EditTime,@JsonString,@SourceSysNo)");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11),
 					new MySqlParameter("@CustomerName", MySqlDbType.VarChar,100),
 					new MySqlParameter("@NickName", MySqlDbType.VarChar,100),
 					new MySqlParameter("@CellphoneNo", MySqlDbType.VarChar,100),
@@ -58,15 +74,14 @@ namespace WebApi.DAL
 					new MySqlParameter("@EditTime", MySqlDbType.DateTime),
 					new MySqlParameter("@JsonString", MySqlDbType.Text),
 					new MySqlParameter("@SourceSysNo", MySqlDbType.VarChar,100)};
-			parameters[0].Value = model.SysNo;
-			parameters[1].Value = model.CustomerName;
-			parameters[2].Value = model.NickName;
-			parameters[3].Value = model.CellphoneNo;
-			parameters[4].Value = model.Status;
-			parameters[5].Value = model.CreateTime;
-			parameters[6].Value = model.EditTime;
-			parameters[7].Value = model.JsonString;
-			parameters[8].Value = model.SourceSysNo;
+			parameters[0].Value = model.CustomerName;
+			parameters[1].Value = model.NickName;
+			parameters[2].Value = model.CellphoneNo;
+			parameters[3].Value = model.Status;
+			parameters[4].Value = model.CreateTime;
+			parameters[5].Value = model.EditTime;
+			parameters[6].Value = model.JsonString;
+			parameters[7].Value = model.SourceSysNo;
 
 			int rows=DbHelperMySQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -93,7 +108,7 @@ namespace WebApi.DAL
 			strSql.Append("EditTime=@EditTime,");
 			strSql.Append("JsonString=@JsonString,");
 			strSql.Append("SourceSysNo=@SourceSysNo");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@CustomerName", MySqlDbType.VarChar,100),
 					new MySqlParameter("@NickName", MySqlDbType.VarChar,100),
@@ -133,9 +148,10 @@ namespace WebApi.DAL
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete from T_Customer ");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11)			};
+					new MySqlParameter("@SysNo", MySqlDbType.Int32)
+			};
 			parameters[0].Value = SysNo;
 
 			int rows=DbHelperMySQL.ExecuteSql(strSql.ToString(),parameters);
@@ -176,9 +192,10 @@ namespace WebApi.DAL
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select SysNo,CustomerName,NickName,CellphoneNo,Status,CreateTime,EditTime,JsonString,SourceSysNo from T_Customer ");
-			strSql.Append(" where SysNo=@SysNo ");
+			strSql.Append(" where SysNo=@SysNo");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@SysNo", MySqlDbType.Int32,11)			};
+					new MySqlParameter("@SysNo", MySqlDbType.Int32)
+			};
 			parameters[0].Value = SysNo;
 
 			WebApi.Model.Customer model=new WebApi.Model.Customer();
