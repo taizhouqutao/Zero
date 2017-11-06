@@ -38,6 +38,11 @@ namespace WebApi.Controllers
             }
             else
             {
+                Model.CellphoneNo = Customer.CellphoneNo ?? "";
+                Model.CustomerName = Customer.CustomerName ?? "";
+                Model.NickName = Customer.NickName ?? "";
+                Model.EditTime = DateTime.Now;
+                bllcustomer.Update(Model);
                 return Model.SysNo;
             }
         }
