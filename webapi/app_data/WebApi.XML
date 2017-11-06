@@ -485,8 +485,8 @@
             <summary>
             保存第三方客户信息
             </summary>
-            <returns>The customer.</returns>
-            <param name="Customer">Customer.</param>
+            <returns>客户系统编码</returns>
+            <param name="Customer">客户导入实体</param>
         </member>
         <member name="T:WebApi.Models.CustomerSave">
             <summary>
@@ -513,7 +513,7 @@
         </member>
         <member name="P:WebApi.Models.CustomerSave.SourceSysNo">
             <summary>
-            第三方来源
+            第三方来源(非空)
             </summary>
             <value>The source sys no.</value>
         </member>

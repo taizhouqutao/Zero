@@ -102,6 +102,7 @@
     <Compile Include="CustomerProperty.cs" />
     <Compile Include="Property.cs" />
     <Compile Include="PropertyValue.cs" />
+    <Compile Include="Extension\Customer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -112,6 +113,9 @@
       <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extension\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -24,7 +24,7 @@ namespace WebApi.Controllers
             var Model = bllcustomer.GetModelList(string.Format("SourceSysNo='{0}'", PageValidate.SqlTextClear(Customer.SourceSysNo))).FirstOrDefault();
             if(Model==null)
             {
-                bllcustomer.Add(new Model.Customer()
+                return bllcustomer.AddWithSysNo(new Model.Customer()
                 {
                     CellphoneNo = Customer.CellphoneNo ?? "",
                     CreateTime = DateTime.Now,

@@ -544,6 +544,33 @@ namespace Maticsoft.DBUtility
             }
         }
 
+        /// <summary>
+        /// 执行SQL语句，返回影响的记录数
+        /// </summary>
+        /// <param name="SQLString">SQL语句</param>
+        /// <returns>影响的记录数</returns>
+        public static int ExecuteSqlWithSysNo(string SQLString, params MySqlParameter[] cmdParms)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    try
+                    {
+                        PrepareCommand(cmd, connection, null, SQLString, cmdParms);
+                        int rows = cmd.ExecuteNonQuery();
+                        var SysNo=Convert.ToInt32(cmd.LastInsertedId);
+                        cmd.Parameters.Clear();
+                        return SysNo;
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException e)
+                    {
+                        throw e;
+                    }
+                }
+            }
+        }
+
 
         /// <summary>
         /// 执行多条SQL语句，实现数据库事务。

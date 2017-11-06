@@ -119,6 +119,10 @@
     <Compile Include="CustomerProperty.cs" />
     <Compile Include="Property.cs" />
     <Compile Include="PropertyValue.cs" />
+    <Compile Include="Extension\Customer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extension\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
