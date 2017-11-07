@@ -24,7 +24,12 @@ namespace Web
 
             RouteTable.Routes.MapHttpRoute("DefaultApi", "{controller}/{action}/{id}", new { id = RouteParameter.Optional });
 
-            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.Converters.Add(  
+                new Newtonsoft.Json.Converters.IsoDateTimeConverter()  
+                {  
+                    DateTimeFormat = "yyyy-MM-dd HH:mm:ss"  
+                }  
+            );  
         }
     }
 }

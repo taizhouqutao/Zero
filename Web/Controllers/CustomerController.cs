@@ -29,7 +29,7 @@ namespace WebApi.Controllers
                     CellphoneNo = Customer.CellphoneNo ?? "",
                     CreateTime = DateTime.Now,
                     CustomerName = Customer.CustomerName ?? "",
-                    SourceSysNo = Customer.SourceSysNo ?? "",
+                    SourceSysNo = PageValidate.SqlTextClear(Customer.SourceSysNo),
                     EditTime = DateTime.Now,
                     NickName = Customer.NickName ?? "",
                     JsonString = "",
