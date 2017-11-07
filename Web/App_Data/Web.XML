@@ -396,7 +396,7 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:WebApi.Controllers.CustomerController.SaveCustomer(WebApi.Models.CustomerSave)">
+        <member name="M:WebApi.Controllers.CustomerController.SaveCustomer(WebApi.Models.ActionRequest{WebApi.Models.CustomerSave})">
             <summary>
             保存第三方客户信息
             </summary>
@@ -465,6 +465,69 @@
             属性值
             </summary>
             <value>The property values.</value>
+        </member>
+        <member name="T:WebApi.Models.ActionRequest`1">
+            <summary>
+            操作请求参数
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ActionRequest`1.AppKey">
+            <summary>
+            AppKey
+            </summary>
+            <value>The app key.</value>
+        </member>
+        <member name="P:WebApi.Models.ActionRequest`1.AppToken">
+            <summary>
+            AppToken
+            </summary>
+            <value>The app token.</value>
+        </member>
+        <member name="P:WebApi.Models.ActionRequest`1.Sign">
+            <summary>
+            Sign
+            </summary>
+            <value>The sign.</value>
+        </member>
+        <member name="P:WebApi.Models.ActionRequest`1.Body">
+            <summary>
+            请求对象
+            </summary>
+            <value>The body.</value>
+        </member>
+        <member name="T:WebApi.Models.ActionResponse`1">
+            <summary>
+            操作返回结果
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ActionResponse`1.Body">
+            <summary>
+            返回结果
+            </summary>
+            <value>The body.</value>
+        </member>
+        <member name="T:WebApi.Models.Response">
+            <summary>
+            返回信息基类
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Response.HasError">
+            <summary>
+            是否有错
+            </summary>
+            <value><c>true</c> if has error; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:WebApi.Models.Response.ErrorDesc">
+            <summary>
+            错误描述
+            </summary>
+            <value>The error desc.</value>
+        </member>
+        <member name="P:WebApi.Models.Response.ErrorCode">
+            <summary>
+            错误编码
+            </summary>
+            <value>The error code.</value>
         </member>
     </members>
 </doc>
