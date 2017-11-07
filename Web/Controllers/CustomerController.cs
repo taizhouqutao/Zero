@@ -4,9 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using WebApi.Models;
-using WebApi.BLL;
 using Maticsoft.Common;
+using WebApi.Models;
+
 namespace WebApi.Controllers
 {
     public class CustomerController : ApiController
@@ -22,9 +22,9 @@ namespace WebApi.Controllers
         {
             if (string.IsNullOrEmpty(Customer.SourceSysNo)) throw new Exception("SourceSysNo不能为空");
             var Model = bllcustomer.GetModelList(string.Format("SourceSysNo='{0}'", PageValidate.SqlTextClear(Customer.SourceSysNo))).FirstOrDefault();
-            if(Model==null)
+            if (Model == null)
             {
-                return bllcustomer.AddWithSysNo(new Model.Customer()
+                return bllcustomer.AddWithSysNo(new WebApi.Model.Customer()
                 {
                     CellphoneNo = Customer.CellphoneNo ?? "",
                     CreateTime = DateTime.Now,

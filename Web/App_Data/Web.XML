@@ -396,5 +396,75 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:WebApi.Controllers.CustomerController.SaveCustomer(WebApi.Models.CustomerSave)">
+            <summary>
+            保存第三方客户信息
+            </summary>
+            <returns>客户系统编码</returns>
+            <param name="Customer">客户导入实体</param>
+        </member>
+        <member name="T:WebApi.Models.CustomerSave">
+            <summary>
+            客户导入
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.CustomerSave.CustomerName">
+            <summary>
+            客户名称
+            </summary>
+            <value>The name of the customer.</value>
+        </member>
+        <member name="P:WebApi.Models.CustomerSave.NickName">
+            <summary>
+            客户昵称
+            </summary>
+            <value>The name of the nick.</value>
+        </member>
+        <member name="P:WebApi.Models.CustomerSave.CellphoneNo">
+            <summary>
+            手机号
+            </summary>
+            <value>The cellphone no.</value>
+        </member>
+        <member name="P:WebApi.Models.CustomerSave.SourceSysNo">
+            <summary>
+            第三方来源(非空)
+            </summary>
+            <value>The source sys no.</value>
+        </member>
+        <member name="T:WebApi.Models.CustomerSetProperty">
+            <summary>
+            客户设置属性
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.CustomerSetProperty.CustomerSysNo">
+            <summary>
+            客户系统编码
+            </summary>
+            <value>The customer sys no.</value>
+        </member>
+        <member name="P:WebApi.Models.CustomerSetProperty.Propertys">
+            <summary>
+            客户属性
+            </summary>
+            <value>The propertys.</value>
+        </member>
+        <member name="T:WebApi.Models.PropertySet">
+            <summary>
+            属性设置
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.PropertySet.PropertySysNo">
+            <summary>
+            属性系统编码
+            </summary>
+            <value>The property sys no.</value>
+        </member>
+        <member name="P:WebApi.Models.PropertySet.PropertyValue">
+            <summary>
+            属性值
+            </summary>
+            <value>The property values.</value>
+        </member>
     </members>
 </doc>
