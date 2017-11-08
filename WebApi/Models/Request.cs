@@ -11,21 +11,21 @@ namespace WebApi.Models
     public class ActionRequest<T>
     {
         /// <summary>
-        /// AppKey
+        /// 项目分配的AppKey
         /// </summary>
         /// <value>The app key.</value>
         [DataMember]
         public string AppKey { get; set; }
 
         /// <summary>
-        /// AppToken
+        /// 项目分配的AppToken
         /// </summary>
         /// <value>The app token.</value>
         [DataMember]
         public string AppToken { get; set; }
 
         /// <summary>
-        /// Sign
+        /// 数据MD5签名
         /// </summary>
         /// <value>The sign.</value>
         [DataMember]
@@ -102,21 +102,21 @@ namespace WebApi.Models
     public class QueryRequest<T>
     {
         /// <summary>
-        /// AppKey
+        /// 项目分配的AppKey
         /// </summary>
         /// <value>The app key.</value>
         [DataMember]
         public string AppKey { get; set; }
 
         /// <summary>
-        /// AppToken
+        /// 项目分配的AppToken
         /// </summary>
         /// <value>The app token.</value>
         [DataMember]
         public string AppToken { get; set; }
 
         /// <summary>
-        /// Sign
+        /// 数据MD5签名
         /// </summary>
         /// <value>The sign.</value>
         [DataMember]
@@ -152,21 +152,21 @@ namespace WebApi.Models
     public class QueryRequest
     {
         /// <summary>
-        /// AppKey
+        /// 项目分配的AppKey
         /// </summary>
         /// <value>The app key.</value>
         [DataMember]
         public string AppKey { get; set; }
 
         /// <summary>
-        /// AppToken
+        /// 项目分配的AppToken
         /// </summary>
         /// <value>The app token.</value>
         [DataMember]
         public string AppToken { get; set; }
 
         /// <summary>
-        /// Sign
+        /// 数据MD5签名
         /// </summary>
         /// <value>The sign.</value>
         [DataMember]
