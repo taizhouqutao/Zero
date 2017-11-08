@@ -529,5 +529,120 @@
             </summary>
             <value>The error code.</value>
         </member>
+        <member name="T:WebApi.Models.QueryRequest`1">
+            <summary>
+            查询请求参数
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.QueryRequest`1.AppKey">
+            <summary>
+            AppKey
+            </summary>
+            <value>The app key.</value>
+        </member>
+        <member name="P:WebApi.Models.QueryRequest`1.AppToken">
+            <summary>
+            AppToken
+            </summary>
+            <value>The app token.</value>
+        </member>
+        <member name="P:WebApi.Models.QueryRequest`1.Sign">
+            <summary>
+            Sign
+            </summary>
+            <value>The sign.</value>
+        </member>
+        <member name="P:WebApi.Models.QueryRequest`1.Body">
+            <summary>
+            请求对象
+            </summary>
+            <value>The body.</value>
+        </member>
+        <member name="P:WebApi.Models.QueryRequest`1.Page">
+            <summary>
+            分页信息
+            </summary>
+            <value>The page.</value>
+        </member>
+        <member name="P:WebApi.Models.QueryRequest`1.Sorts">
+            <summary>
+            请求排序
+            </summary>
+            <value>The sorts.</value>
+        </member>
+        <member name="T:WebApi.Models.QueryResponse`1">
+            <summary>
+            查询返回结果
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.QueryResponse`1.Body">
+            <summary>
+            返回对象
+            </summary>
+            <value>The body.</value>
+        </member>
+        <member name="P:WebApi.Models.QueryResponse`1.Page">
+            <summary>
+            返回分页信息
+            </summary>
+            <value>The page.</value>
+        </member>
+        <member name="T:WebApi.Models.RequestPage">
+            <summary>
+            请求分页信息
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.RequestPage.PageSize">
+            <summary>
+            每页大小
+            </summary>
+            <value>The size of the page.</value>
+        </member>
+        <member name="P:WebApi.Models.RequestPage.PageIndex">
+            <summary>
+            请求页码
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="T:WebApi.Models.ResponsePage">
+            <summary>
+            返回分页信息
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ResponsePage.PageSize">
+            <summary>
+            每页大小
+            </summary>
+            <value>The size of the page.</value>
+        </member>
+        <member name="P:WebApi.Models.ResponsePage.PageIndex">
+            <summary>
+            请求页码
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:WebApi.Models.ResponsePage.TotalCount">
+            <summary>
+            总共数量
+            </summary>
+            <value>The total count.</value>
+        </member>
+        <member name="T:WebApi.Models.Sort">
+            <summary>
+            请求排序
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Sort.IsDesc">
+            <summary>
+            是否倒序
+            </summary>
+            <value><c>true</c> if is desc; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:WebApi.Models.Sort.Name">
+            <summary>
+            排序字段名称
+            </summary>
+            <value>The name.</value>
+        </member>
     </members>
 </doc>
