@@ -23,7 +23,7 @@ namespace WebApi.BP.ActionBP
                     EditTime = DateTime.Now,
                     NickName = Data.Body.NickName ?? "",
                     JsonString = "",
-                    Status = 1,
+                    Status = 1, 
                 });
             }
             else
