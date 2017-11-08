@@ -56,6 +56,16 @@ namespace WebApi.Models
     }
 
     /// <summary>
+    /// 操作返回结果
+    /// </summary>
+    [Serializable]
+    [DataContract]
+    public class ActionResponse : Response
+    {
+
+    }
+
+    /// <summary>
     /// 返回信息基类
     /// </summary>
     [Serializable]
@@ -125,6 +135,49 @@ namespace WebApi.Models
         /// <value>The page.</value>
         [DataMember]
         public RequestPage Page{ get; set; }
+
+        /// <summary>
+        /// 请求排序
+        /// </summary>
+        /// <value>The sorts.</value>
+        [DataMember]
+        public List<Sort> Sorts { get; set; }
+    }
+
+    /// <summary>
+    /// 查询请求参数
+    /// </summary>
+    [Serializable]
+    [DataContract]
+    public class QueryRequest
+    {
+        /// <summary>
+        /// AppKey
+        /// </summary>
+        /// <value>The app key.</value>
+        [DataMember]
+        public string AppKey { get; set; }
+
+        /// <summary>
+        /// AppToken
+        /// </summary>
+        /// <value>The app token.</value>
+        [DataMember]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// Sign
+        /// </summary>
+        /// <value>The sign.</value>
+        [DataMember]
+        public string Sign { get; set; }
+
+        /// <summary>
+        /// 分页信息
+        /// </summary>
+        /// <value>The page.</value>
+        [DataMember]
+        public RequestPage Page { get; set; }
 
         /// <summary>
         /// 请求排序

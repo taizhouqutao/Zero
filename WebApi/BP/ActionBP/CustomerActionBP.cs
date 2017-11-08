@@ -36,5 +36,10 @@ namespace WebApi.BP.ActionBP
                 return Model.SysNo;
             }
         }
+
+        public static void SetCustomerProperty(ActionRequest<CustomerSetProperty> Customer)
+        {
+            
+        }
     }
 }
