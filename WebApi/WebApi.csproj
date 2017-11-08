@@ -30,7 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>App_Data\WebApi.XML</DocumentationFile>
+    <DocumentationFile>bin\WebApi.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,6 +39,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\WebApi.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Maticsoft.Common, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -219,7 +220,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\WebApi.XML" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\TestClient.css" />
     <Content Include="Content\bootstrap.css" />
@@ -344,6 +344,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="BP\QueryBP\" />
   </ItemGroup>
   <ItemGroup>

@@ -79,7 +79,7 @@ namespace WebApi.Areas.HelpPage
             //// The sample will be generated as if the controller named "Values" and action named "Post" were returning a string.
             //config.SetActualResponseType(typeof(string), "Values", "Post");
 
-            config.SetDocumentationProvider(new XmlDocumentationProvider(HttpContext.Current.Server.MapPath("~/App_Data/WebApi.XML")));
+            config.SetDocumentationProvider(new XmlDocumentationProvider(HttpContext.Current.Server.MapPath("~/bin/WebApi.XML")));
         }
 
 #if Handle_PageResultOfT
