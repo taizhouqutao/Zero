@@ -10,6 +10,9 @@ using WebApi.BP.QueryBP;
 
 namespace WebApi.Controllers
 {
+    /// <summary>
+    /// 客户模块API接口
+    /// </summary>
     public class CustomerController : ApiController
     {
 
@@ -55,18 +58,39 @@ namespace WebApi.Controllers
         }
 
         /// <summary>
+        /// 属性添加（客户）
+        /// </summary>
+        /// <returns>The customer property.</returns>
+        /// <param name="Property">Property.</param>
+        [HttpPost]
+        public ActionResponse AddProperty(ActionRequest<PropertyAdd> Property)
+        {
+            ActionResponse result = new ActionResponse();
+            try
+            {
+                CustomerActionBP.AddProperty(Property);
+            }
+            catch (Exception ex)
+            {
+                result.HasError = true;
+                result.ErrorDesc = ex.Message;
+            }
+            return result;
+        }
+
+        /// <summary>
         /// 获取属性列表（客户）
         /// </summary>
         /// <returns>属性列表（客户）</returns>
         /// <param name="Query">Query.</param>
         [HttpPost]
-        public QueryResponse<List<Property>> GetCustomerPropertys(QueryRequest Query)
+        public QueryResponse<List<Property>> GetPropertys(QueryRequest Query)
         {
             QueryResponse<List<Property>> result = new QueryResponse<List<Property>>();
             try
             {
                 ResponsePage Paging;
-                result.Body=CustomerQueryBP.GetCustomerPropertys(Query,out Paging);
+                result.Body=CustomerQueryBP.GetPropertys(Query,out Paging);
                 result.Page = Paging;
             }
             catch (Exception ex)

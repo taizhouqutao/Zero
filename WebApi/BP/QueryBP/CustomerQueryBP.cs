@@ -6,7 +6,7 @@ namespace WebApi.BP.QueryBP
 {
     public class CustomerQueryBP
     {
-        public static List<Property> GetCustomerPropertys(QueryRequest Query,out ResponsePage Page)
+        public static List<Property> GetPropertys(QueryRequest Query,out ResponsePage Page)
         {
             throw new Exception("接口未实现");
         }

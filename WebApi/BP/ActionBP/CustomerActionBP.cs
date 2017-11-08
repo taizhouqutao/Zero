@@ -8,6 +8,11 @@ namespace WebApi.BP.ActionBP
     public class CustomerActionBP
     {
         private static BLL.Customer bllcustomer = new BLL.Customer();
+        /// <summary>
+        /// 保存客户
+        /// </summary>
+        /// <returns>The customer.</returns>
+        /// <param name="Data">Data.</param>
         public static int SaveCustomer(ActionRequest<CustomerSave> Data)
         {
             if (string.IsNullOrEmpty(Data.Body.SourceSysNo)) throw new Exception("SourceSysNo不能为空");
@@ -37,7 +42,20 @@ namespace WebApi.BP.ActionBP
             }
         }
 
+        /// <summary>
+        /// 设置单个客户属性
+        /// </summary>
+        /// <param name="Customer">Customer.</param>
         public static void SetCustomerProperty(ActionRequest<CustomerSetProperty> Customer)
+        {
+            
+        }
+
+        /// <summary>
+        /// 添加属性（客户）
+        /// </summary>
+        /// <param name="Property">Property.</param>
+        public static void AddProperty(ActionRequest<PropertyAdd> Property)
         {
             
         }
