@@ -80,7 +80,27 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment.</returns>
         /// <param name="Moment">Moment.</param>
-        public QueryResponse<MomentCustomerDetail> GetMomentUnRead(QueryRequest<MomentUnReadQuery> Moment)
+        public QueryResponse<List<MomentCustomerDetail>> GetMomentUnReads(QueryRequest<MomentUnReadQuery> Moment)
+        {
+            throw new Exception("待实现");
+        }
+
+        /// <summary>
+        /// 获取朋友圈列表
+        /// </summary>
+        /// <returns>The moments.</returns>
+        /// <param name="Moment">Moment.</param>
+        public QueryResponse<List<Moment>> GetMoments(QueryRequest<MomentQuery> Moment)
+        {
+            throw new Exception("待实现");
+        }
+
+        /// <summary>
+        /// 获取朋友圈详情
+        /// </summary>
+        /// <returns>The moments.</returns>
+        /// <param name="Moment">Moment.</param>
+        public QueryResponse<Moment> GetMomentBySysNo(QueryRequest<MomentSysNo> Moment)
         {
             throw new Exception("待实现");
         }
