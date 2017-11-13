@@ -59,5 +59,14 @@ namespace WebApi.BP.ActionBP
         {
             
         }
+
+        /// <summary>
+        /// 编辑属性（客户）
+        /// </summary>
+        /// <param name="Property">Property.</param>
+        public static void EditProperty(ActionRequest<PropertyEdit> Property)
+        {
+            
+        }
     }
 }

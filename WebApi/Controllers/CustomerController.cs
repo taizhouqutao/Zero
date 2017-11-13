@@ -79,6 +79,27 @@ namespace WebApi.Controllers
         }
 
         /// <summary>
+        /// 属性编辑（客户）
+        /// </summary>
+        /// <returns>The property.</returns>
+        /// <param name="Property">Property.</param>
+        [HttpPost]
+        public ActionResponse EditProperty(ActionRequest<PropertyEdit> Property)
+        {
+            ActionResponse result = new ActionResponse();
+            try
+            {
+                CustomerActionBP.EditProperty(Property);
+            }
+            catch (Exception ex)
+            {
+                result.HasError = true;
+                result.ErrorDesc = ex.Message;
+            }
+            return result;
+        }
+
+        /// <summary>
         /// 获取属性列表（客户）
         /// </summary>
         /// <returns>属性列表（客户）</returns>

@@ -227,6 +227,8 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Models\Property.cs" />
     <Compile Include="BP\QueryBP\CustomerQueryBP.cs" />
+    <Compile Include="Controllers\MomentController.cs" />
+    <Compile Include="Models\Moment.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
