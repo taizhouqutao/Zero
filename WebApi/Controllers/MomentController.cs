@@ -20,6 +20,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public ActionResponse<int> AddMoment(ActionRequest<MomentAdd> Moment)
         {
             throw new Exception("待实现");
@@ -30,6 +31,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment good.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public ActionResponse SetMomentGood(ActionRequest<MomentSetGood> Moment)
         {
             throw new Exception("待实现");
@@ -40,6 +42,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment reply.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public ActionResponse SetMomentReply(ActionRequest<MomentSetReply> Moment)
         {
             throw new Exception("待实现");
@@ -50,6 +53,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment read.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public ActionResponse SetMomentRead(ActionRequest<MomentSetRead> Moment)
         {
             throw new Exception("待实现");
@@ -60,6 +64,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public ActionResponse DelMoment(ActionRequest<MomentDel> Moment)
         {
             throw new Exception("待实现");
@@ -70,6 +75,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment reply.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public ActionResponse DelMomentReply(ActionRequest<MomentDelReply> Moment)
         {
             throw new Exception("待实现");
@@ -80,6 +86,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moment.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public QueryResponse<List<MomentCustomerDetail>> GetMomentUnReads(QueryRequest<MomentUnReadQuery> Moment)
         {
             throw new Exception("待实现");
@@ -90,6 +97,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moments.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public QueryResponse<List<Moment>> GetMoments(QueryRequest<MomentQuery> Moment)
         {
             throw new Exception("待实现");
@@ -100,6 +108,7 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns>The moments.</returns>
         /// <param name="Moment">Moment.</param>
+        [HttpPost]
         public QueryResponse<Moment> GetMomentBySysNo(QueryRequest<MomentSysNo> Moment)
         {
             throw new Exception("待实现");
