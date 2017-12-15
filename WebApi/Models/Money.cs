@@ -25,12 +25,15 @@ namespace WebApi.Models
         public decimal BlanceAmount { get; set; }
     }
 
+    /// <summary>
+    /// 用户钱包查询
+    /// </summary>
     [Serializable]
     [DataContract]
     public class MoneyQuery
     {
         /// <summary>
-        /// 钱包编码
+        /// 客户编码
         /// </summary>
         /// <value>The customer sys no.</value>
         [DataMember]
@@ -106,5 +109,63 @@ namespace WebApi.Models
         /// <value>The active status.</value>
         [DataMember]
         public int ActiveStatus{ get; set; }
+    }
+
+    /// <summary>
+    /// 钱包日志流水查询
+    /// </summary>
+    [Serializable]
+    [DataContract]
+    public class MoneyLogQuery
+    {
+        /// <summary>
+        /// 钱包编码
+        /// </summary>
+        /// <value>The money sys no.</value>
+        [DataMember]
+        public int MoneySysNo { get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        /// <value>The start date.</value>
+        [DataMember]
+        public DateTime StartDate { get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        /// <value>The end date.</value>
+        [DataMember]
+        public DateTime EndDate { get; set; }
+    }
+
+    /// <summary>
+    /// 钱包充值
+    /// </summary>
+    [Serializable]
+    [DataContract]
+    public class MoneyRecharge
+    {
+        /// <summary>
+        /// 目标钱包
+        /// </summary>
+        /// <value>The money sys no.</value>
+        [DataMember]
+        public int MoneySysNo { get; set; }
+
+        /// <summary>
+        /// 充值资金
+        /// </summary>
+        /// <value>The amount.</value>
+        [DataMember]
+        public decimal Amount { get; set; }
+
+        /// <summary>
+        /// 支付方式（1微信公众号，2支付宝h5）
+        /// </summary>
+        /// <value>The type of the pay.</value>
+        [DataMember]
+        public int PayType { get; set; }
     }
 }
